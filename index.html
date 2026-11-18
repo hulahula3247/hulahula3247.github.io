@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Geunsoo Song - M.S. student at Sogang University researching efficient AI systems, LLM inference, and GPU computing.">
+  <meta name="color-scheme" content="light dark">
+  <script src="./theme.js"></script>
+  <title>Geunsoo Song</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./pretendard-preview.css">
+  <link rel="stylesheet" href="./theme-atmosphere.css">
+  <script src="./assets/lucide-icons.js" defer></script>
+  <script src="./assets/brand-icons.js" defer></script>
+  <script src="./content.js" defer></script>
+  <script src="./translations.js" defer></script>
+  <script src="./theme-transition.js" defer></script>
+  <script src="./theme-atmosphere.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body data-page="home" id="top">
+  <div class="edge-atmosphere" aria-hidden="true" inert>
+    <div class="celestial-gutter celestial-left">
+      <div class="sky-night"><div class="edge-stars" data-edge-stars="left"></div><span class="edge-meteor"></span></div>
+    </div>
+    <div class="celestial-gutter celestial-right">
+      <div class="sky-night"><div class="edge-stars" data-edge-stars="right"></div><svg class="edge-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg><span class="edge-meteor"></span></div>
+    </div>
+  </div>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="main-nav" aria-label="Main navigation" data-i18n-aria="mainNavigation">
+        <a href="#about" aria-current="location" data-i18n="about">About</a>
+        <a href="#publications" data-i18n="publications">Publications</a>
+        <a href="#awards" data-i18n="awardsNav">Awards</a>
+      </nav>
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Language / 언어" data-i18n-aria="languageLabel">
+          <button type="button" class="language-trigger" data-language-trigger aria-expanded="false" aria-controls="language-menu" aria-label="Language / 언어" data-i18n-aria="languageLabel"><i data-icon="globe"></i><span data-language-current>EN</span></button>
+          <div class="language-menu" id="language-menu" data-language-menu hidden>
+            <div class="language-options">
+              <button type="button" data-language="ko" lang="en" aria-pressed="false">Korean</button>
+              <button type="button" data-language="en" lang="en" aria-pressed="true">English</button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" title="Switch to dark mode" aria-label="Switch to dark mode"><i data-icon="moon"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-layout">
+    <aside class="profile" aria-label="Profile" id="profile" data-i18n-aria="profileLabel"></aside>
+    <main id="main">
+      <section id="about" class="about section" aria-labelledby="about-title">
+        <div class="section-heading"><h2 id="about-title" data-i18n="about">About</h2></div>
+        <div id="biography" class="biography"></div>
+        <ul class="research-list" id="research-list" aria-label="Research interests" data-i18n-aria="researchInterests"></ul>
+      </section>
+
+      <section id="publications" class="section" aria-labelledby="publications-title">
+        <div class="section-heading publications-heading">
+          <h2 id="publications-title" data-i18n="publications">Publications</h2>
+          <div class="publication-filter" role="group" aria-label="Publication view" data-i18n-aria="publicationView">
+            <button type="button" data-filter="selected" aria-pressed="true" data-i18n="selected">Selected</button>
+            <button type="button" data-filter="all" aria-pressed="false" data-i18n="all">All</button>
+          </div>
+        </div>
+        <div class="publication-list" id="publication-list"></div>
+        <p class="publication-footnote" data-i18n="equalContribution">* Equal contribution</p>
+      </section>
+
+      <section id="demos" class="section" aria-labelledby="demos-title">
+        <div class="section-heading"><h2 id="demos-title" data-i18n="researchDemos">Research Projects</h2></div>
+        <div class="demo-list" id="demo-list"></div>
+      </section>
+
+      <section id="awards" class="section" aria-labelledby="awards-title">
+        <div class="section-heading"><h2 id="awards-title" data-i18n="competitiveProgramming">Competitive Programming</h2></div>
+        <div class="awards-list" id="awards-list"></div>
+      </section>
+
+      <section id="education" class="section" aria-labelledby="education-title">
+        <div class="section-heading"><h2 id="education-title" data-i18n="education">Education</h2></div>
+        <div class="timeline" id="education-list"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; <span data-year>2026</span> <span data-profile-name>Geunsoo Song</span></span>
+      <span id="updated-at"></span>
+      <a href="#top" class="back-top" aria-label="Back to top" data-i18n-aria="backTop" title="Back to top" data-i18n-title="backTop"><i data-icon="arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <span class="sr-only" id="language-status" role="status" aria-live="polite"></span>
+  <noscript><p class="noscript-note">프로필과 논문 목록을 보려면 JavaScript를 활성화해 주세요.<br>JavaScript is needed to display the profile and publication list.</p></noscript>
+</body>
+</html>
