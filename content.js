@@ -41,11 +41,11 @@ window.siteContent = {
       "videos": [
         {
           "label": "Original(llama.cpp)",
-          "url": "https://aisys.sogang.ac.kr/wp-content/uploads/2026/05/test1.mp4"
+          "url": "./assets/test1.mp4"
         },
         {
           "label": "oFFN",
-          "url": "https://aisys.sogang.ac.kr/wp-content/uploads/2026/05/test3.mp4"
+          "url": "./assets/test3.mp4"
         }
       ]
     },

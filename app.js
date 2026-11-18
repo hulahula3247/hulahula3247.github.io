@@ -90,7 +90,13 @@
 
   function videoHTML(demo) {
     const detailsOpen = Boolean(document.querySelector(`details[data-demo-details="${demo.id}"]`)?.open);
-    const videos = demo.videos.map(video => `<figure class="demo-video"><video controls muted loop playsinline preload="metadata" aria-label="${escape(`${demo.title}: ${video.label}`)}"><source src="${escape(video.url)}" type="video/mp4">${external(video.url, labels.videoFallback)}</video><figcaption>${escape(video.label)}</figcaption></figure>`).join("");
+    const videos = demo.videos.map(video => {
+      const source = escape(video.url);
+      const fallback = /^\.\/assets\/[a-z0-9-]+\.mp4$/i.test(video.url)
+        ? `<a href="${source}">${escape(labels.videoFallback)}</a>`
+        : external(video.url, labels.videoFallback);
+      return `<figure class="demo-video"><video controls muted loop playsinline preload="metadata" aria-label="${escape(`${demo.title}: ${video.label}`)}"><source src="${source}" type="video/mp4">${fallback}</video><figcaption>${escape(video.label)}</figcaption></figure>`;
+    }).join("");
     const description = demo.videoDescription ? `<p class="demo-description">${escape(demo.videoDescription)}</p>` : "";
     return `<article class="research-video" id="${escape(demo.id)}-video"><h3>${escape(demo.videoTitle || demo.title)}</h3><div class="demo-videos">${videos}</div><p class="demo-specs demo-overview"><span><strong>${escape(demo.speedup)}&times; speedup</strong> in ${escape(demo.software)} (Model: ${escape(demo.model)})</span></p><details class="demo-details" data-demo-details="${escape(demo.id)}"${detailsOpen ? " open" : ""}><summary>${escape(labels.demoDetails)}${icon("chevron-down")}</summary>${description}<p class="demo-specs"><span>[HW] ${escape(demo.hardware)}</span><span>[SW] ${escape(demo.software)}</span></p><p class="demo-specs"><span>[Acceleration] [FFN]: ${escape(demo.ffn)}</span><span>[Attention]: ${escape(demo.attention)}</span></p></details></article>`;
   }
