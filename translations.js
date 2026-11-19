@@ -18,7 +18,7 @@
     "type": "공동 제1저자",
     "title": "심사 중인 원고",
     "venueLabel": "Under review",
-    "description": "MoE 모델의 서빙 환경에서 활성화 희소성을 활용한 효율적인 서빙 시스템을 설계했습니다."
+    "description": "여러 GPU에서 MoE 모델을 효율적으로 서빙하기 위해 활성화 희소성을 활용한 추론 시스템을 설계했습니다."
   }
 };
   const demos = {
@@ -115,7 +115,7 @@
     },
     {
       "title": "Hardware-aware Optimization",
-      "description": "효율적인 알고리즘이 실제 하드웨어에서도 높은 성능을 발휘하도록 HW/SW Co-design에 관심이 있습니다. 이를 위해 CUDA 및 Triton으로 GPU 커널을 개발하고, Nsight Systems/Compute를 활용해 성능 병목을 분석하고 최적화하는 연구를 진행하였습니다."
+      "description": "효율적인 알고리즘이 실제 하드웨어에서도 높은 성능을 발휘하도록 HW/SW Co-design에 관심이 있습니다. 이를 위해 CUDA 및 Triton으로 GPU 커널을 개발하고, Nsight Systems/Compute를 활용해 성능 병목을 분석하고 최적화하는 연구를 진행하였습니다. 또한 여러 서버 GPU를 사용하는 LLM 서빙 환경에서 연산을 분산하고 GPU 간 부하를 균형 있게 나누는 병렬화 기법을 연구하고 있습니다."
     }
   ],
   "education": [

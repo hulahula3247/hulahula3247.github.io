@@ -96,7 +96,7 @@ window.siteContent = {
     },
     {
       "title": "Hardware-aware Optimization",
-      "description": "I am interested in HW/SW co-design to ensure that efficient algorithms also deliver high performance on real hardware. To this end, I have developed GPU kernels in CUDA and Triton and used Nsight Systems/Compute to analyze and optimize performance bottlenecks."
+      "description": "I am interested in HW/SW co-design to ensure that efficient algorithms also deliver high performance on real hardware. To this end, I have developed GPU kernels in CUDA and Triton and used Nsight Systems/Compute to analyze and optimize performance bottlenecks. I also study how to distribute computation and balance workloads across server GPUs during LLM serving."
     }
   ],
   "publications": [
@@ -173,7 +173,7 @@ window.siteContent = {
       "status": "under-review",
       "image": "",
       "imageAlt": "",
-      "description": "Designed an efficient serving system that leverages activation sparsity for MoE models.",
+      "description": "Designed an inference system that uses activation sparsity to serve MoE models efficiently across multiple GPUs.",
       "abstract": "",
       "url": "",
       "pdf": "",
