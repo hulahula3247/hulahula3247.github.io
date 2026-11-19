@@ -18,7 +18,7 @@
     "type": "공동 제1저자",
     "title": "심사 중인 원고",
     "venueLabel": "Under review",
-    "description": "여러 GPU에서 MoE 모델을 효율적으로 서빙하기 위해 활성화 희소성을 활용한 추론 시스템을 설계했습니다."
+    "description": "다중 GPU 환경에서 MoE 모델의 추론을 가속하기 위해 활성화 희소성을 활용한 서빙 시스템을 설계했습니다."
   }
 };
   const demos = {
