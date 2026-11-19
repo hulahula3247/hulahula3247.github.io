@@ -22,7 +22,7 @@ window.siteContent = {
       "id": "offn-jetson",
       "title": "oFFN",
       "videoTitle": "oFFN: LLM Inference Acceleration",
-      "videoDescription": "This video demonstrates oFFN implemented in llama.cpp during actual inference. Combining oFFN with attention input sparsity achieves 3.11x the token generation speed of the original llama.cpp. The experimental settings are listed below.",
+      "videoDescription": "These videos show inference with the oFFN implementation in llama.cpp. With both oFFN and attention input sparsity enabled, token generation was 3.11× as fast as in the original llama.cpp.",
       "summary": "oFFN predicts which neurons will become zero after ReLU to skip unnecessary FFN computation and weight reads. When the pre-ReLU value is negative, the output becomes zero, allowing the corresponding neuron operations to be skipped. To predict activation efficiently at low cost, oFFN computes the contributions of outlier dimensions exactly and uses a group-based approximation for the remaining dimensions.\n\nFrequently activated hot neurons bypass prediction and are processed on Tensor Cores, while cold neurons perform only the operations needed according to the prediction results. By adapting these execution paths to the batch size, oFFN accelerates inference at batch size one and small batch sizes.\n\nEvaluated on the ReLU-based ProSparse-LLaMA-2-13B model on Jetson AGX Orin, oFFN achieves up to 5.46x speedup for FFN computation and 2.01x for end-to-end decoding over Dense.",
       "paperId": "offn-asplos-2026",
       "figure": {
@@ -31,10 +31,9 @@ window.siteContent = {
         "width": 6132,
         "height": 2294
       },
-      "model": "Prosparse-llama2-13B",
+      "model": "ProSparse-LLaMA-2-13B (ReLU-fied model)",
       "hardware": "Jetson ORIN AGX 64GB",
       "software": "llama.cpp",
-      "speedup": "3.11",
       "ffn": "oFFN (Specificity: 84%)",
       "attention": "Input Sparsity (Sparsity: 50%)",
       "source": "https://aisys.sogang.ac.kr/",

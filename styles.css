@@ -215,8 +215,6 @@ main > .section + .section { border-top: 1px solid var(--line); padding-top: 28p
 .demo-video figcaption { margin-top: 6px; color: var(--muted); font-size: 14px; text-align: center; }
 .demo-specs { display: flex; flex-wrap: wrap; gap: 2px 14px; margin-top: 13px; font-size: 13.5px; line-height: 1.8; color: var(--muted); }
 .demo-specs > span { min-width: 0; overflow-wrap: anywhere; }
-.demo-overview { font-size: 15.5px; gap: 4px 24px; color: var(--ink); }
-.demo-overview strong { color: var(--ink); font-size: 17px; font-weight: 700; }
 .demo-details { margin-top: 5px; }
 .demo-details summary { display: inline-flex; align-items: center; gap: 6px; width: fit-content; color: var(--blue); font-size: 13.5px; cursor: pointer; list-style: none; }
 .demo-details summary::-webkit-details-marker { display: none; }

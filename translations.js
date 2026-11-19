@@ -23,7 +23,7 @@
 };
   const demos = {
     "offn-jetson": {
-      "videoDescription": "llama.cpp에 구현한 oFFN의 실제 추론 영상입니다. oFFN과 Attention 입력 희소화를 함께 적용하여, 기본 llama.cpp 대비 3.11배의 토큰 생성 속도를 달성했습니다. 실험 세부 사항은 아래와 같습니다.",
+      "videoDescription": "llama.cpp에 구현한 oFFN의 실제 추론 영상입니다. oFFN과 Attention 입력 희소화를 함께 적용하여, 기본 llama.cpp 대비 3.11배의 토큰 생성 속도를 달성했습니다.",
       "summary": "oFFN은 ReLU 이후 0이 될 뉴런을 미리 예측하여 불필요한 FFN 연산과 가중치 읽기를 생략하는 기법입니다. ReLU 이전의 값이 음수이면 출력이 0이 되므로, 해당 뉴런에 대응하는 연산을 건너뛸 수 있습니다. 이를 위해 oFFN에서는 outlier 차원의 기여는 정확하게 계산하고, 나머지는 그룹 기반으로 근사하여 활성화 여부를 적은 비용으로 효율적으로 예측합니다.\n\n또한 자주 활성화되는 Hot neuron은 예측 과정을 거치지 않고 Tensor Core에서 처리하며, Cold neuron은 예측 결과에 따라 필요한 연산만 수행합니다. 이러한 실행 경로를 배치 크기에 맞게 구성하여 단일 배치와 소규모 배치 환경에서 추론을 가속합니다.\n\nJetson AGX Orin에서 ReLU 기반 모델인 ProSparse-LLaMA-2-13B를 평가한 결과, Dense 대비 FFN 연산은 최대 5.46배, 전체 디코딩은 최대 2.01배 가속하였습니다."
     },
     "roshift-project": {
@@ -149,7 +149,7 @@
     "researchDemos": "Research Projects",
     "paperDetails": "Research overview",
     "videoFallback": "Open video",
-    "demoDetails": "Details",
+    "demoDetails": "Experiment Details",
     "awards": "Awards & Honors",
     "awardsNav": "Awards",
     "education": "Education",
@@ -204,7 +204,7 @@
     "researchDemos": "연구 프로젝트",
     "paperDetails": "연구 소개",
     "videoFallback": "영상 열기",
-    "demoDetails": "상세 정보",
+    "demoDetails": "실험정보",
     "awards": "수상실적",
     "awardsNav": "수상실적",
     "education": "학력",
