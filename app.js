@@ -71,11 +71,14 @@
     const list = awardList(sorted, titleTag);
     if (!compact) return list;
     const programming = `<div class="competitive-programming" aria-label="${escape(labels.competitiveProgramming)}"><p class="competitive-intro">${escape(data.competitiveProgrammingIntro)}</p><ul class="competitive-profiles">${data.competitiveProgramming.map(profile => {
-      const rank = profile.rank ? `<strong>${escape(profile.rank)}</strong>` : "";
-      const rating = profile.maxRating ? `${rank ? " / " : ""}${escape(labels.peakRating)} <strong>${escape(profile.maxRating)}</strong>` : "";
+      const metrics = [
+        profile.rank ? `<strong>${escape(profile.rank)}</strong>` : "",
+        profile.maxRating ? `${escape(labels.peakRating)} <strong>${escape(profile.maxRating)}</strong>` : "",
+        profile.solvedAtLeast ? `${escape(labels.problemsSolved)} <strong>${escape(profile.solvedAtLeast.toLocaleString("en-US"))}+</strong>` : "",
+      ].filter(Boolean).join(" / ");
       const category = profile.category ? `<span class="competitive-category">(${escape(profile.category)})</span>` : "";
       const platformIcon = profile.iconImage ? `<img src="${escape(profile.iconImage)}" class="platform-logo" alt="" width="18" height="18">` : icon(profile.icon);
-      return `<li data-platform="${escape(profile.platform)}"><a class="competitive-profile" href="${escape(profile.url)}" target="_blank" rel="noopener noreferrer"><span class="competitive-platform"><span class="competitive-platform-name">${platformIcon}${escape(profile.platform)}</span>${category}</span><span class="competitive-account"><span class="competitive-handle">${escape(profile.handle)}</span><span class="competitive-rating">${rank}${rating}</span>${icon("arrow-up-right")}</span></a></li>`;
+      return `<li data-platform="${escape(profile.platform)}"><a class="competitive-profile" href="${escape(profile.url)}" target="_blank" rel="noopener noreferrer"><span class="competitive-platform"><span class="competitive-platform-name">${platformIcon}${escape(profile.platform)}</span>${category}</span><span class="competitive-account"><span class="competitive-handle">${escape(profile.handle)}</span><span class="competitive-rating">${metrics}</span>${icon("arrow-up-right")}</span></a></li>`;
     }).join("")}</ul></div>`;
     const heading = `<span class="award-archive-label">${escape(labels.allAwards)}</span><span class="award-archive-count">${escape(awardCount(sorted.length))}</span>`;
     return programming + highlights + `<details class="award-archive" data-award-archive${archiveOpen ? " open" : ""}><summary>${heading}${icon("chevron-down")}</summary>${list}</details>`;

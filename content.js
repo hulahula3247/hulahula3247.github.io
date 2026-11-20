@@ -63,6 +63,13 @@ window.siteContent = {
   ],
   "competitiveProgramming": [
     {
+      "platform": "Baekjoon",
+      "iconImage": "./assets/baekjoon-icon.png",
+      "handle": "hulahula3247",
+      "url": "https://acmicpc.net/user/hulahula3247",
+      "solvedAtLeast": 2400
+    },
+    {
       "platform": "Codeforces",
       "iconImage": "./assets/codeforces-icon.png",
       "handle": "hulahula32471",
