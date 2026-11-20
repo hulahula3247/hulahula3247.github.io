@@ -240,6 +240,7 @@ main > .section + .section { border-top: 1px solid var(--line); padding-top: 28p
 .competitive-rating { grid-column: 1; font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
 .competitive-rating strong { font-weight: 500; font-variant-numeric: tabular-nums; }
 .competitive-account > .icon { grid-column: 2; grid-row: 1 / span 2; align-self: center; width: 14px; height: 14px; color: var(--muted); }
+[data-platform="Baekjoon"] .competitive-handle { color: var(--secondary); }
 [data-platform="Codeforces"] .competitive-handle { color: var(--cp-codeforces); }
 [data-platform="AtCoder"] .competitive-handle { color: var(--cp-atcoder); }
 [data-platform="solved.ac"] .competitive-handle { color: var(--cp-solved); }
